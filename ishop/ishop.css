@@ -1,0 +1,34 @@
+.ShopName{
+    color: seagreen;
+    font-weight: 600;
+    font-style: italic;
+    text-align: left;
+}
+.Table {
+    border-spacing:0px;
+    border-collapse: collapse;
+    text-align: center;
+}
+.Table > .Table_header{
+    background-color:cadetblue;
+}
+.Table > .Table_header>.Header_Row>.Column{
+    border:1px;
+    border-style: solid;
+    border-color: black;
+}    
+.Table_body{
+    text-align: center;
+    border: 2px;
+    background-color: aqua;
+}
+.Table_body .Row {
+    border:1px;
+    border-style: solid;
+    border-color: black;
+}
+.Table_body .Row .Column{
+    border:1px;
+    border-style: solid;
+    border-color: black;
+}
