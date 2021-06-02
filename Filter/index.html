@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+<body>
+    <div id='display_here'></div>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+
+    <script src="filter.js"></script>
+    <link rel="stylesheet" type="text/css" href="filter.css" />
+
+    <script>
+        let string_array = [
+                {text:"прямоток", code: 1}, 
+                {text:"проворство", code: 2},
+                {text:"простодушие", code: 3},
+                {text:"пространство", code: 4},
+                {text:"прострел", code: 5},
+                {text:"павлин", code: 6},
+                {text:'прирост', code:7},
+            ];
+       // let input_text = 'AAA'
+    //    let refresh_array = function(){
+    //     let prop_array = string_array
+    //    }
+
+        ReactDOM.render(
+            React.createElement(FilterBlock,{prop_array: string_array,}),
+            document.getElementById('display_here')
+        )
+    </script>
+    
+</body>
+</html>
