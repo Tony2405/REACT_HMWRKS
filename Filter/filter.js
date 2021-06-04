@@ -26,25 +26,30 @@ let FilterBlock = React.createClass({
         //console.log('STATE has been changed - '+this.state.input_text);//для проверки
     },
 
+    //copy_array : this.props.prop_array,
+
     alphabet_Sort_Unsort: function(){
+        let copy_array = this.props.prop_array.slice();
         if(this.state.sorted == false){
-        this.setState({array_to_display : this.state.array_to_display.sort((a, b) =>
+        this.setState({sorted: true, array_to_display : copy_array.sort((a, b) =>
             (a.text < b.text)? -1: 
             (a.text > b.text)? 1: 
             0)}), 
-            this.state.sorted = true,
+            //this.state.sorted = true,
             console.log('clicked')
         } 
-        else{this.setState({array_to_display: this.props.prop_array}),
-            this.state.sorted = false,
+        else{this.setState({sorted: false, array_to_display: this.props.prop_array,}),
             console.log("not clicked"),
             console.log(this.props.prop_array)            
         } 
     },
 
     clear:function(){
-        this.setState ({input_text : ''});
-        this.setState({array_to_display : this.props.prop_array})
+        //this.state.sorted = true;
+        
+        this.setState ({input_text : '', sorted: true});
+        this.alphabet_Sort_Unsort();
+        //this.setState({array_to_display : this.props.prop_array})
     },
     
 
