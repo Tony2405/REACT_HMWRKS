@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ishop</title>
+</head>
+<body>
+    <div id='container'></div>
+    
+    <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+        
+    <script src="ishop.js"></script>
+    <script src="item.js"></script>
+    <link rel="stylesheet" type="text/css" href="ishop.css" />
+    
+
+    <script>
+
+        let table_header = {name:"Item", image:'Photo', price:"Price BYN", stock:"Left in stock",};
+        let shop_name = "ISHOP";
+        let tentList=[
+            {name:"Tramp Lite Tourist 2", price: 100, in_stock: 34, photo_url: "https://content2.onliner.by/catalog/device/main/9d7f29e1f9da1aa8ea3ebb281a18f7d6.jpeg", code:1,},
+            {name:"Tramp Lite Hunter 2", price: 150, in_stock: 50, photo_url: "https://content2.onliner.by/catalog/device/main/8be0a80ce87ff2838a100ed1625ccbe4.jpeg", code:2,},
+            {name:"Tramp Brest 4", price: 100, in_stock: 12, photo_url: "https://content2.onliner.by/catalog/device/main/52bfbf5040c28c6dd83d664aed9dca56.jpeg", code:3,},
+            {name:"Tramp Lite Camp 4", price: 1200, in_stock: 15, photo_url: "https://content2.onliner.by/catalog/device/main/63db3abd2d7478b547c5a03cca0e1708.jpeg", code:4,},
+            {name:"Tramp Baltic Wave 5", price: 2000, in_stock: 6, photo_url: "https://content2.onliner.by/catalog/device/main/05489b0a4eb4549f23ddb316c42ca835.jpeg", code:5,},
+            {name:"Tramp Colibri 2", price: 100, in_stock: 25, photo_url: "https://content2.onliner.by/catalog/device/main/d26e85ada9fb4b8fa38030aad3b5e915.jpeg", code:6, },
+        ];
+
+        ReactDOM.render(
+            React.createElement(ShopComponent, {name:shop_name, header:table_header, items:tentList}),
+            document.getElementById('container') // сюда будет отрисовываться наша таблица
+        );
+
+    </script>
+    </body>
+</html>
